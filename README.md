@@ -1,4 +1,5 @@
 ## Autocalib
+This proejct describes in brief the implementation of camera calibration method as described by Zhengyou Zhang in his paper ”A Flexible New Technique for Camera Calibration”
 
 ### To run the code
 1) Change the directory where AutoCalib.py is located   
