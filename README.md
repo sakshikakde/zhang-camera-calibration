@@ -5,7 +5,7 @@ This proejct describes in brief the implementation of camera calibration method 
 - Change the location to the root directory
 - Run the following command: 
 ```
-python3 AutoCalib.py --ImageFolderPath /home/sakshi/courses/CMSC733/sakshi_hw1/Data/Calibration_Imgs --SaveFolderePath /home/sakshi/courses/CMSC733/sakshi_hw1/Results/
+python3 AutoCalib.py --ImageFolderPath ./Data/Calibration_Imgs --SaveFolderePath ./Results/
 ```
 
 ## Parameters
