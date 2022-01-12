@@ -13,7 +13,6 @@ import argparse
 square_side = 12.5
 
 
-# %%
 def reprojectPointsAndGetError(A, kc, all_RT, all_image_corners, world_corners):
 
     error_mat = []
@@ -71,7 +70,6 @@ def reprojectPointsAndGetError(A, kc, all_RT, all_image_corners, world_corners):
     return error_average, all_reprojected_points
 
 
-# %%
 def lossFunc(x0, init_all_RT, all_image_corners, world_corners):
 
     A, kc = retrieveA(x0)
@@ -128,19 +126,16 @@ def lossFunc(x0, init_all_RT, all_image_corners, world_corners):
         
 
 
-# %%
 def main():
 
     Parser = argparse.ArgumentParser()
-    Parser.add_argument('--ImageFolderPath', default= '/home/sakshi/courses/CMSC733/sakshi_hw1/Data/Calibration_Imgs', help='absolute path')
-    Parser.add_argument('--SaveFolderePath', default='/home/sakshi/courses/CMSC733/sakshi_hw1/Results/', help='Saved video file name')
+    Parser.add_argument('--ImageFolderPath', default= './Data/Calibration_Imgs', help='Data path')
+    Parser.add_argument('--SaveFolderePath', default='./Results/', help='Saved video file name')
 
     Args = Parser.parse_args()
     folder_name = Args.ImageFolderPath
     save_folder = Args.SaveFolderePath  
 
-    # folder_name = "/home/sakshi/courses/CMSC733/sakshi_hw1/Data/Calibration_Imgs"
-    # save_folder = "/home/sakshi/courses/CMSC733/sakshi_hw1/Results/"
     images = loadImages(folder_name)
     h, w = [6,9]
     all_image_corners = getImagesPoints(images, h, w)
@@ -193,8 +188,6 @@ def main():
 
     cv2.destroyAllWindows()
 
-
-# %%
 if __name__ == "__main__":
     main()
 
